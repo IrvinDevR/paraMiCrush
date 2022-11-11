@@ -14,6 +14,6 @@ btnSi.addEventListener('click', function(e) {
     alert('Sabía que dirías que SÍ. Casémonos ya y tengamos hijos. TE AMO!!! 😍');
 
     divModoSexo.style.display = "block";
-    const cancion = new Audio('');
+    const cancion = new Audio('mp3\\Rulo_Contrabanda_Por_Ti.mp3');
     cancion.play();
 })
