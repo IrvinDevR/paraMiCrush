@@ -25,12 +25,17 @@ body {
 video {
    width: 99%;
    border-radius: 15px;
+   border: 2px solid #e8ecf2;
+   box-shadow: -1px -1px 5px rgba(255 255 255 /.6),
+      1px 1px 5px rgba(0 0 0 /.3),
+      inset -2px -2px 5px rgba(255 255 255 /.6),
+      inset 2px 2px 4px rgba(0 0 0 /.3);
 }
 
 h1 {
    color: #4781ba;
    text-align: center;
-   font-size: 35px;
+   font-size: 1.5em;
 }
 
 h2 {
@@ -42,8 +47,8 @@ h2 {
 }
 
 .container {
-   width: 400px;
-   height: 550px;
+   width: 300px;
+   height: 400px;
    border-radius: 15px;
    -webkit-border-radius: 15px;
    -moz-border-radius: 15px;
@@ -58,9 +63,9 @@ h2 {
 }
 
 .cuerpo {
-   height: 318px;
+   height: 223px;
    width: 99%;
-   padding-top: 50px;
+   padding-top: 38px;
    box-shadow: -1px -1px 5px rgba(255 255 255 /.6),
       1px 1px 5px rgba(0 0 0 /.3),
       inset -2px -2px 5px rgba(255 255 255 /.6),
@@ -74,9 +79,11 @@ h2 {
 
 .btns {
    display: flex;
+   width: 99%;
    justify-content: space-between;
-   margin: 40px 90px;
-   z-index: 2000;
+   margin: 30px 0px;
+   padding: 0 35px;
+   z-index: 500;
 }
 
 button {
@@ -94,13 +101,6 @@ button {
    justify-content: center;
    font-size: 22px;
    font-weight: bold;
-}
-
-button svg {
-   margin-right: 8px;
-   width: 18px;
-   height: 18px;
-   fill: #4781ba;
 }
 
 #btn_si,
@@ -170,6 +170,19 @@ button svg {
    width: 390px;
    position: absolute;
    display: none;
+   z-index: 1000;
+}
+
+.container .cubrir {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background: linear-gradient(180deg, rgba(0 0 0 /.2), rgba(0 0 0 /.2));
+   filter: blur(25px);
+   -webkit-filter: blur(25px);
+   z-index: -1;
 }
 
 .container .modo_img {
@@ -178,7 +191,7 @@ button svg {
    align-items: center;
    justify-content: space-around;
    width: 398px;
-   padding: 20px 0;
+   padding: 0;
 }
 
 .container .modo_img p {
@@ -218,45 +231,43 @@ img[alt="patricio"] {
 
 .contacto {
    position: fixed;
-   top: 78vh;
-   left: 65vw;
+   top: 85%;
+   z-index: 1000;
 }
 
 img[alt="contacto"] {
-   height: 50px;
+   height: 25px;
 }
 
 .contenedor-contacto {
    position: relative;
-   min-width: 100%;
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
    justify-content: space-around;
    flex-wrap: wrap;
 }
 
 .card {
    position: relative;
-   width: 150px;
+   width: 300px;
    color: #222;
-   height: 150px;
-   background-color: rgb(190, 184, 184);
-   margin: 20px 50px;
+   height: 50px;
+   background-color: #e8ecf2;
    border-radius: 20px;
    -webkit-border-radius: 20px;
    -moz-border-radius: 20px;
    -ms-border-radius: 20px;
    -o-border-radius: 20px;
-   box-shadow: 0 5px 15px rgba(0 0 0 /.5);
+   box-shadow: -3px -5px 10px rgba(187, 181, 181, 0.8), 5px 5px 10px rgba(0 0 0 /.25);
 }
 
 .card .imgbox {
    position: absolute;
-   top: 10px;
-   left: 10px;
+   top: 2.5px;
+   left: 2.5px;
    background: rgba(0 0 0 /.1);
-   width: calc(100% - 20px);
-   height: calc(100% - 20px);
+   width: calc(100% - 5px);
+   height: calc(100% - 5px);
    z-index: 10;
    display: flex;
    justify-content: center;
@@ -278,93 +289,103 @@ img[alt="contacto"] {
 }
 
 .card .imgbox .fa {
-   font-size: 1em;
+   padding: 5px;
+   border-radius: 50%;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   -ms-border-radius: 50%;
+   -o-border-radius: 50%;
 }
 
-.card .imgbox .fa-contacto {
+
+/*
+/////////   animacion de rebote    /////////
+   font-size: 1em;
    animation: animated-1 1.5s alternate infinite;
    -webkit-animation: animated-1 1.5s alternate infinite;
-}
+ */
 
 @keyframes animated-1 {
    0% {
       font-size: 1rem;
    }
 
-   25% {
-      font-size: 2rem;
-   }
-
-   50% {
-      font-size: 3rem;
-   }
-
-   75% {
-      font-size: 4rem;
-   }
-
    100% {
-      font-size: 5rem;
+      font-size: 2.5rem;
    }
 }
 
 .card:hover .imgbox {
-   width: 100px;
-   height: 100px;
-   left: -75px;
-   top: calc(50% - 50px);
+   width: 50px;
+   height: 50px;
+   left: -60px;
+   top: calc(50% - 25px);
+   box-shadow: 5px 5px 30px rgba(0 0 0 /.1);
+   border-radius: 50%;
    transition: .7s;
    -webkit-transition: .7s;
    -moz-transition: .7s;
    -ms-transition: .7s;
    -o-transition: .7s;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   -ms-border-radius: 50%;
+   -o-border-radius: 50%;
+   border: 1.5px solid #e8ecf2;
+}
+
+.card:hover {
+   border: 3px solid #e8ecf2;
+   box-shadow: -1px -1px 5px rgba(255 255 255 /.6),
+      1px 1px 5px rgba(0 0 0 /.3),
+      inset -2px -2px 5px rgba(255 255 255 /.6),
+      inset 2px 2px 4px rgba(0 0 0 /.3);
 }
 
 .card .content {
    position: absolute;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   padding-top: 2px;
    top: 0;
    right: 0;
-   width: calc(100% - 15px);
+   width: 100%;
    height: 100%;
    padding: 18px;
+   margin-top: 2px;
 }
 
 .card .content h3 {
-   font-size: 1em;
-   margin-bottom: 5px;
+   font-size: 0.8em;
    font-weight: 500;
    font-family: var(--ff-contacto);
+   color: #ff5165;
+   text-transform: uppercase;
 }
 
 .card .content p {
    font-size: 0.6em;
    font-family: var(--ff-contacto);
    line-height: 0.8rem;
-   margin-bottom: 5px;
 }
 
 .card .content a {
    display: inline-block;
    font-size: 0.7rem;
-   margin-top: 5px;
    border-radius: 5px;
    -webkit-border-radius: 5px;
    -moz-border-radius: 5px;
    -ms-border-radius: 5px;
    -o-border-radius: 5px;
-   padding: 5px 17px;
+   padding: 4.5px 15px;
    font-family: var(--ff-contacto);
    text-decoration: none;
    font-weight: 400;
    color: #222;
    background: linear-gradient(270deg, #f403d4, #f44141, #fce628, #f403d4);
-   background-size: 400%;
+   background-size: 300%;
    z-index: 1;
-}
-
-.card .content #contacto {
-   color: #ff5165;
-   text-transform: uppercase;
 }
 
 .card .content a:hover {
@@ -378,6 +399,6 @@ img[alt="contacto"] {
    }
 
    100% {
-      background-position: 400%;
+      background-position: 300%;
    }
 }
