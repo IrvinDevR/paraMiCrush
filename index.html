@@ -1,30 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Quieres ser mi Novia?</title>
-    <link rel="stylesheet" href="app.css">
-</head>
-<body>
-    <div class="container">
-        <div class="modo_sexo">
-            <h2>SEP, LO SABÍA!</h2>
-            <img src="img/patricio.png" alt="ptricio">
-        </div>
-        
-        <video width="400" height="300" autoplay muted loop>
-            <source src="img/space.webm">
-        </video>
-        <h1>¿Quieres ser mi novia?</h1>
-        <div class="btns">
-            <button id="btn_si">Sí😍</button>
-            <button id="btn_no">No😥</button>
-        </div>
-    </div>
-</body>
 
-<script src="app.js"></script>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>¿Quieres ser mi Novia?</title>
+      <link rel="stylesheet" href="app.css">
+   </head>
+
+   <body>
+      <section class="container">
+         <div class="modo_sexo">
+            <div class="modo_img">
+               <h2>LO SABÍA! Ti amo! 💝</h2>
+               <img src="img/patricio.png" alt="patricio">
+               <p>¡Eres el amor de mi vida!</p>
+            </div>
+         </div>
+
+         <video autoplay muted loop>
+            <source src="img/space.webm">
+         </video>
+         <div class="cuerpo">
+            <h1>¿QUIERES SER <br> MI NOVIA?</h1>
+            <div class="btns">
+               <button id="btn_si">
+                  <span>Sí</span>
+               </button>
+               <button id="btn_no">
+                  <span>No</span>
+               </button>
+            </div>
+         </div>
+      </section>
+      <section class="contacto">
+         <div class="contenedor-contacto">
+            <div class="card">
+               <div class="imgbox">
+                  <i class="fa fa-contacto"><img src="img/contacto-icon.png" alt="contacto"></i>
+               </div>
+               <div class="content">
+                  <h3 id="contacto">Autor</h3>
+                  <p>Rubén Mantilla Quiroz <br> Front-End Developer</p>
+                  <a target="_blank" href="https://github.com/IrvinDevR">Ver más...</a>
+               </div>
+            </div>
+         </div>
+      </section>
+   </body>
+
+   <script src="app.js"></script>
 
 </html>
