@@ -321,17 +321,22 @@ img[alt="contacto"] {
    left: -60px;
    top: calc(50% - 25px);
    box-shadow: 5px 5px 30px rgba(0 0 0 /.1);
-   border-radius: 50%;
    transition: .7s;
    -webkit-transition: .7s;
    -moz-transition: .7s;
    -ms-transition: .7s;
    -o-transition: .7s;
+   border-radius: 50%;
    -webkit-border-radius: 50%;
    -moz-border-radius: 50%;
    -ms-border-radius: 50%;
    -o-border-radius: 50%;
    border: 1.5px solid #e8ecf2;
+   background-color: #e8ecf2;
+   box-shadow: -1px -1px 5px rgba(255 255 255 /.6),
+      1px 1px 5px rgba(0 0 0 /.3),
+      inset -2px -2px 5px rgba(255 255 255 /.6),
+      inset 2px 2px 4px rgba(0 0 0 /.3);
 }
 
 .card:hover {
