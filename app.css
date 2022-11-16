@@ -441,3 +441,48 @@ img[alt="contacto"] {
 svg {
    height: 35px;
 }
+
+
+/* animacion de h1 */
+
+.cursor {
+   position: relative;
+   width: 20em;
+   margin: 0 auto;
+   border-right: 2px solid rgba(255 255 255 /.75);
+   font-size: 20px;
+   text-align: center;
+   white-space: nowrap;
+   overflow: hidden;
+   transform: translate(0%);
+   -webkit-transform: translate(0%);
+   -moz-transform: translate(0%);
+   -ms-transform: translate(0%);
+   -o-transform: translate(0%);
+}
+
+.typewriter-animation {
+   animation:
+      typewriter 4.5s steps(50) 1s 1 normal both,
+      blinkingCursor 600ms steps(50) infinite normal;
+}
+
+@keyframes typewriter {
+   from {
+      width: 0;
+   }
+
+   to {
+      width: 100%;
+   }
+}
+
+@keyframes blinkingCursor {
+   from {
+      border-right-color: rgba(23, 21, 21, 0.75);
+   }
+
+   to {
+      border-right-color: transparent;
+   }
+}
